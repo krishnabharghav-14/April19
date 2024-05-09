@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <style>
+            #table{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                background-color: rgba(14, 125, 251, 0.903);
+                column-gap: 10px;
+                row-gap: 10px;                
+                padding: 10px;
+                width: 90%;
+                grid-template-rows: 60px 60px 60px;
+            }
+            #table span{
+                background-color: lightblue;
+                text-align: center;
+                padding-top:  20px;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <center>
+            <div id="table">
+                <span style="grid-column-start: 1;grid-column-end: 4;">Header</span>
+                <span style="grid-row-start: 2;grid-row-end: 4;">Menu</span>
+                <span>Main</span>
+                <span>Right</span>
+                <span style="grid-column-start: 2;grid-column-end: 4;">Footer</span>
+            </div>
+            </center>
+        </article>
+    </body>
+</html>

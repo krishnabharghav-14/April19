@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                display: grid;
+                grid-template-columns: 20% 80%;
+            }
+            .lefty{
+                text-align: center;
+                
+            }
+            .righty{
+                overflow-x: scroll;
+                height: 95vh;
+            }
+            .lefty p{
+                padding: 10px;
+                margin-left: -8px;
+            }
+            .lefty p:hover{
+                background-color: lightgrey;
+            }
+            .grid1{
+                display: grid;
+                grid-template-columns: 33.333% 33.333% 33.333%;
+            }
+            .grid1 img{
+                opacity: 0.7;
+            }
+            .grid1 img:hover{
+                opacity: 1;
+            }
+            .grid2{
+                display: grid;
+                grid-template-columns:100%;
+                justify-content: center;
+            }
+            .grid3{
+                display: grid;
+                grid-template-columns: 40% 40%;
+                justify-content: space-around;
+
+            }
+            .flex1{
+                display:flex;
+                flex-direction: column;
+                border: 1px solid black;
+                opacity: 0.7;
+            }
+            .numbers{
+                justify-content: center;
+                display: flex;                
+                
+            }
+            .flex1 p{
+                background-color: white;
+                height: 30px ; 
+                color: black;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                border-bottom: 1px solid black;
+                padding-top: 8px;
+
+            }
+            .flex1 .row{
+                background-color: black;
+                color: white;
+                               
+            }
+            .numbers p{
+                padding:10px;
+                
+            }
+            .numbers p:hover{
+                background-color: black;
+                color: white;
+            }
+            .external{
+                width: 100%;
+                background-color: rgb(85,85,85);
+                text-align:center;
+                padding-bottom: 20px;
+            }
+            .external img{
+                width: 75%;
+                align-items: center;
+            }
+            .internal{
+
+
+            }
+            .progressbar1{
+                width: 90%;
+                height: 18px;
+                background-color: white;
+                
+            }
+            .progressbar2{
+                background-color: gray;
+
+            }
+            .middle{
+                display: flex;
+                width: 100%;
+            }
+            .contact{
+                width: 80%;
+                padding-bottom: 20px;                
+            }
+            .footgrid{
+                display: grid;
+                grid-template-columns: 33.333% 33.333% 33.333%;
+                justify-content: center;
+                width: 98%;
+            }
+            .footgrid div{
+                width: 100%;
+                margin-left: 10px;
+            }
+            .blog:hover{
+                background-color: lightgray;
+            }
+            .blog{
+                width: 40px;
+            }
+            .popular{
+                display: flex;
+                height: 200px;
+                flex-wrap: wrap;
+                margin-left: 0px;
+            }
+            .popular p{
+                margin: 2px;
+                background-color: gray;
+                height: 20px;
+                color: whitesmoke;                
+            }
+            @media only screen and (max-width:600px){
+                .container{
+                    grid-template-columns: 100%;
+                    grid-template-rows: 90px;
+                }
+                .lefty{
+                    top: -2px;
+                    background-color: white;
+                }
+                .lefty p{
+                    
+                    display: none;
+                }
+                .grid1{
+                    grid-template-columns: 100%;
+                }
+                .footgrid{
+                    grid-template-columns: 100%;
+                    
+                }
+                .grid3{
+                    grid-template-columns: 60%;
+                    row-gap: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- A div(container) is used as grid to give a layout to the page -->
+        <div class="container">
+            <!-- A div(lefty) is used to hold the left side content(nav) -->
+            <div class="lefty">
+                <h3>SOME NAME</h3>
+                <p>PORTFOLIO</p>
+                <p>ABOUT ME</p>
+                <p>CONTACT</p>
+            </div>
+            <!-- A div(righty) is used to hold the right side content -->
+            <div class="righty">
+                <!-- A div(grid1) is used as grid to hold the pictues -->
+                <div class="grid1">
+                    <img src="https://www.w3schools.com/w3images/natureboy.jpg" width="100%">
+                    <img src="https://www.w3schools.com/w3images/boy.jpg" width="100%">
+                    <img src="https://www.w3schools.com/w3images/girl.jpg" width="100%">
+                    <img src="https://www.w3schools.com/w3images/girl_mountain.jpg" width="100%">
+                    <img src="https://www.w3schools.com/w3images/man_bench.jpg" width="100%">
+                    <img src="https://www.w3schools.com/w3images/girl_train.jpg" width="100%">
+                    <img src="https://www.w3schools.com/w3images/girl.jpg" width="100%">
+                    <img src="https://www.w3schools.com/w3images/natureboy.jpg" width="100%">
+                    <img src="https://www.w3schools.com/w3images/closegirl.jpg" width="100%">
+                </div>
+                <!-- A div(numbers) is used as flex to hold the pages number navigation -->
+                <div class="numbers">
+                    <p><<</p>
+                    <p style="background-color: black; color: white;">1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>>></p>
+                </div>
+                <!-- A div(external) is used to large content as a whole in righty and give a common background -->
+                <div class="external">
+                    <!-- A div(internal) is used to large content  in external and separate particular section-->
+                    <div class="internal">
+                        <h3>About Me</h3>
+                        <img src="https://www.w3schools.com/w3images/avatar_hat.jpg"> 
+                        <h3>My Name</h3>
+                        <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>mail: example@example.com</p>
+                        <p>tel: 5353 35531</p>
+                        <hr>
+                        <h3>Technical Skills</h3>
+                        <div class="grid2">
+                            <h4>P h o t o g r a p h y</h4>
+                            <div class="progressbar1" style="justify-self: center;">
+                                <div class="progressbar2" style="width: 95%;">95%</div>
+                            </div>
+                        </div>
+                        <div class="grid2">
+                            <h4>P h o t o g r a p h y</h4>
+                            <div class="progressbar1" style="justify-self: center;">
+                                <div class="progressbar2" style="width: 95%;">95%</div>
+                            </div>
+                        </div>
+                        <div class="grid2">
+                            <h4>P h o t o g r a p h y</h4>
+                            <div class="progressbar1" style="justify-self: center;">
+                                <div class="progressbar2" style="width: 95%;">95%</div>
+                            </div>
+                        </div>                       
+                    </div> 
+                    <div style="margin: 23px;text-align: center;background-color: white;width: 150px;padding-top: 10px;padding-bottom: 10px;">
+                        Download Resume
+                    </div>  
+                    <hr>
+                    <h3 style="text-align: left;margin: 23px;color: white;">How much i change</h3>
+                    <div class="grid3" style="text-align: center;">
+                        <div class="flex1">
+                            <p class="row">Basic</p>
+                            <p>Web Design</p>
+                            <p>Photography</p>
+                            <p>5GB Storage</p>
+                            <p>Mail Support</p>
+                            <p style="height: 40px;">$10<br>per month</p>
+                            <p><button>Sign Up</button></p>
+                        </div>
+                        <div class="flex1">
+                            <p class="row">Basic</p>
+                            <p>Web Design</p>
+                            <p>Photography</p>
+                            <p>50GB Storage</p>
+                            <p>Endless Support</p>
+                            <p style="height: 40px;">$25<br>per month</p>
+                            <p><button>Sign Up</button></p>
+                        </div>
+                    </div>           
+                </div>
+                <center>
+                    <div class="contact">
+                        <h3>Contact Me</h3>
+                        <p style="text-align: left;">Do you want me to photograph you? Fill out the form and fill me in with the details :) I love meeting new people!</p>
+                        <div style="text-align: left;">
+                            <label for="n">Name</label><br>
+                            <input id="n" type="text" name="username" style="width: 100%;height: 20px;"></input><br><br>
+                            <label for="e">Email</label><br>
+                            <input id="e" type="text" name="Email" style="width: 100%;height: 20px;"></input><br><br>
+                            <label for="m">Message</label><br>
+                            <input id="m" type="text" name="Message" style="width: 100%;height: 20px;"></input><br>
+                        </div><br>
+                        <div style="background-color: black;color: white;height: 25px;padding-top: 5px;">
+                            Send Message
+                        </div>  
+                    </div>
+                </center>
+                <footer>
+                    <div class="footgrid">
+                        <div>
+                            <h3>INFO</h3>
+                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                        </div>
+                        <div>
+                            <h3>BLOG POSTS</h3>
+                            <div class="blog" style="padding: 16px;padding-bottom: 0px;width: 250px;">
+                                <img src="https://www.w3schools.com/w3images/workshop.jpg" width="50px">
+                                <h3 style="display: inline-block;position: relative;bottom: 33px;">Lorem</h3>
+                                <p style="display: inline-block;position: relative;right: 60px;bottom: 10px;">Sed mattis nunc</p>
+                            </div>
+                            <hr style="opacity: 0.6;margin: bottom 0px;padding: 0px;width: 93%;">
+                            <div class="blog" style="padding: 16px;padding-bottom: 0px;width: 250px;">
+                                <img src="https://www.w3schools.com/w3images/gondol.jpg" width="50px">
+                                <h3 style="display: inline-block;position: relative;bottom: 33px;">Lorem</h3>
+                                <p style="display: inline-block;position: relative;right: 60px;bottom: 10px;">Sed mattis nunc</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>POPULAR TAGS</h3>
+                            <div class="popular">
+                                <p style="background-color: black;width: 50px;text-align: center;padding: 2px;position: relative;bottom: 4px;">Travel</p>
+                                <p style="width: 80px;text-align: center;">New York</p>
+                                <p style="width: 60px;text-align: center;">Dinner</p>
+                                <p style="width: 60px;text-align: center;">Salmon</p>
+                                <p style="width: 60px;text-align: center;">France</p>
+                                <p style="width: 60px;text-align: center;">Drinks</p>
+                                <p style="width: 50px;text-align: center;">Ideas</p>
+                                <p style="width: 60px;text-align: center;">Flavors</p>
+                                <p style="width: 60px;text-align: center;">Cuisine</p>
+                                <p style="width: 70px;text-align: center;">Chicken</p>
+                                <p style="width: 70px;text-align: center;">Dressing</p>
+                                <p style="width: 50px;text-align: center;">Fried</p>
+                                <p style="width: 40px;text-align: center;">Fish</p>
+                                <p style="width: 50px;text-align: center;">Duck</p>
+                            </div>
+                        </div>    
+                    </div>
+                    <div style="background-color: black;color: white; width: 100%;height: 50px;text-align: center;">
+                        <p style="padding-top: 15px;">Powered by <a href="https://www.w3schools.com/w3css/default.asp" style="color: inherit;">w3.css</a></p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+
